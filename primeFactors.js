@@ -1,5 +1,26 @@
-// Your code here
+let isPrime = function(number) {
+  if (number < 2) {
+    return false;
+  }
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
 
+let primeFactors = function(num) {
+
+  let array = [];
+
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i) && num % i === 0) {
+      array.push(i);
+    }
+  }
+  return array;
+}
 
 
 console.log(primeFactors(12));  // [2, 3]
