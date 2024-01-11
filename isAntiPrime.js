@@ -1,4 +1,21 @@
-// Your code here
+let factorize = function(num) {
+  let factorCount = 0
+  for (let i = 1; i < num; i++) {
+    if (num % i === 0) {
+      factorCount++
+    }
+  }
+  return factorCount;
+}
+
+let isAntiPrime = function(n) {
+  for (let i = 1; i < n; i++) {
+    if (factorize(i) >= factorize(n)) {
+      return false;
+    }
+  }
+  return true;
+}
 
 
 
