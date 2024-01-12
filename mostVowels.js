@@ -1,5 +1,13 @@
 function mostVowels(sentence) {
-  // your code here
+  let words = sentence.split(' ');
+  let largest = 0;
+  for (let j = 0; j < words.length; j++) {
+
+    if (countVowels(words[j]) > largest) {
+      largest = j;
+    }
+  }
+  return words[largest];
 }
 
 function countVowels(word) {
