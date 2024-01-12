@@ -1,5 +1,11 @@
 function allElseEqual(arr) {
-  // your code here
+  let sumHalf = (sumArray(arr) / 2);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === sumHalf) {
+      return arr[i];
+    }
+  }
+  return null;
 }
 
 function sumArray(array) {
